@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+
+    <style>
+        /* ---------------------- GLOBAL STYLES ---------------------- */
+        :root {
+            --main-color: #2a6f97;
+            --accent-color: #f4a261;
+            --text-color: #333;
+            --bg-light: #f9f9f9;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            color: var(--text-color);
+            background: white;
+            line-height: 1.6;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-weight: 600;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        section {
+            padding: 4rem 8vw;
+        }
+
+        /* ---------------------- HEADER ---------------------- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 8vw;
+            background: var(--bg-light);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        nav a {
+            margin-left: 1.5rem;
+            font-size: 1rem;
+            transition: 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--main-color);
+            transform: translateY(-2px);
+        }
+
+        /* ---------------------- HERO SECTION ---------------------- */
+        #hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            min-height: 70vh;
+        }
+
+        #hero img {
+            width: 280px;
+            border-radius: 50%;
+            border: 5px solid var(--main-color);
+        }
+
+        .title-animate {
+            font-size: 1.4rem;
+            animation: colorShift 3s infinite alternate ease-in-out;
+        }
+
+        @keyframes colorShift {
+            0% {
+                color: var(--main-color);
+            }
+
+            100% {
+                color: var(--accent-color);
+            }
+        }
+
+        /* ---------------------- ABOUT SECTION ---------------------- */
+        #about {
+            background: var(--bg-light);
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* ---------------------- SKILLS (GRID) ---------------------- */
+        #skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            transition: 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        /* ---------------------- PROJECTS (GRID) ---------------------- */
+        #projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            transition: 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: scale(1.03);
+        }
+
+        /* ---------------------- CONTACT ---------------------- */
+        form {
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        input,
+        textarea {
+            padding: 0.8rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        button {
+            padding: 0.8rem;
+            background: var(--main-color);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background: var(--accent-color);
+            transform: translateY(-3px);
+        }
+
+        /* ---------------------- FOOTER ---------------------- */
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--bg-light);
+            margin-top: 2rem;
+        }
+
+        /* ---------------------- RESPONSIVE ---------------------- */
+        @media (max-width: 768px) {
+            #hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav a {
+                margin-left: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <h2>My Portfolio</h2>
+        <nav>
+            <a href="#hero">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section id="hero">
+        <div>
+            <h1>Hello, I'm Rihan Khan</h1>
+            <p class="title-animate">Full Stack Developer</p>
+            <p>I enjoy building clean, responsive, and functional web experiences.</p>
+        </div>
+        <img src="PIC.jpeg" alt="Profile Photo" />
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I’m a web development student passionate about creating user-friendly and visually appealing websites. I
+            enjoy experimenting with layouts, animations, and responsive design techniques to improve both usability and
+            aesthetics.</p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div id="skills-grid">
+            <div class="skill-card">HTML</div>
+            <div class="skill-card">CSS</div>
+            <div class="skill-card">JavaScript</div>
+
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div id="projects-grid">
+            <div class="project-card">
+                <h3>Portfolio Website</h3>
+                <p>A simple personal website showcasing my work and skills.</p>
+            </div>
+            <div class="project-card">
+                <h3>Weather App</h3>
+                <p>An interactive app that displays live weather data.</p>
+            </div>
+            <div class="project-card">
+                <h3>Todo List</h3>
+                <p>A clean interface for managing daily tasks efficiently.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea rows="5" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        © 2025 Rihan Khan | All Rights Reserved
+    </footer>
+</body>
+
+</html>
